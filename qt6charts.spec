@@ -7,7 +7,7 @@
 #
 Name     : qt6charts
 Version  : 6.6.1
-Release  : 4
+Release  : 5
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtcharts-everywhere-src-6.6.1.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtcharts-everywhere-src-6.6.1.tar.xz
 Summary  : No detailed summary available
