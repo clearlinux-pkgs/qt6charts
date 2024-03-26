@@ -6,17 +6,16 @@
 # autospec commit: c02b2fe
 #
 Name     : qt6charts
-Version  : 6.6.2
-Release  : 13
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtcharts-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtcharts-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 14
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtcharts-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtcharts-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-3.0
 Requires: qt6charts-lib = %{version}-%{release}
 Requires: qt6charts-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
-BuildRequires : mesa-dev
 BuildRequires : qt6base-dev
 BuildRequires : qt6declarative-dev
 BuildRequires : qt6multimedia-dev
@@ -61,15 +60,15 @@ license components for the qt6charts package.
 
 
 %prep
-%setup -q -n qtcharts-everywhere-src-6.6.2
-cd %{_builddir}/qtcharts-everywhere-src-6.6.2
+%setup -q -n qtcharts-everywhere-src-6.6.3
+cd %{_builddir}/qtcharts-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711161366
+export SOURCE_DATE_EPOCH=1711480960
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -130,7 +129,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711161366
+export SOURCE_DATE_EPOCH=1711480960
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6charts
 cp %{_builddir}/qtcharts-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6charts/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -152,155 +151,155 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtCharts/6.6.2/QtCharts/private/abstractbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/abstractchartlayout_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/abstractdomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/areachartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/axisanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/bar_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/baranimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/barchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/boxplotanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/boxplotchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/boxwhiskers_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/boxwhiskersanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/boxwhiskersdata_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/candlestick_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/candlestickanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/candlestickbodywicksanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/candlestickchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/candlestickdata_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/cartesianchartaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/cartesianchartlayout_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartaxiselement_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartbackground_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartbarcategoryaxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartbarcategoryaxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartcategoryaxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartcategoryaxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartcoloraxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartcoloraxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartconfig_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartdataset_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartdatetimeaxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartdatetimeaxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartelement_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/charthelpers_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartlogvalueaxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartlogvalueaxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartpresenter_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/charttheme_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemebluecerulean_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemeblueicy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemebluencs_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemebrownsand_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemedark_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemehighcontrast_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemelight_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthememanager_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemeqt_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartthemesystem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/charttitle_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartvalueaxisx_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/chartvalueaxisy_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/datetimeaxislabel_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/editableaxislabel_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/glwidget_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/glxyseriesdata_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/horizontalaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/horizontalbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/horizontalpercentbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/horizontalstackedbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/legendlayout_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/legendmarkeritem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/legendmoveresizehandler_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/legendscroller_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/linearrowitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/linechartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/logxlogydomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/logxlogypolardomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/logxydomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/logxypolardomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/percentbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/pieanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/piechartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/piesliceanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/pieslicedata_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/piesliceitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartaxisangular_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartaxisradial_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartcategoryaxisangular_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartcategoryaxisradial_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartdatetimeaxisangular_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartdatetimeaxisradial_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartlayout_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartlogvalueaxisangular_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartlogvalueaxisradial_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartvalueaxisangular_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polarchartvalueaxisradial_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/polardomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qabstractaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qabstractbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qabstractseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qarealegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qareaseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qbarcategoryaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qbarlegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qbarmodelmapper_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qbarset_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qboxplotlegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qboxplotmodelmapper_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qboxplotseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qboxset_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcandlesticklegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcandlestickmodelmapper_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcandlestickseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcandlestickset_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcategoryaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qchart_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qchartglobal_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qchartview_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qcoloraxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qdatetimeaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qhorizontalbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qhorizontalpercentbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qhorizontalstackedbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qlegend_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qlegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qlineseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qlogvalueaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qpercentbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qpielegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qpiemodelmapper_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qpieseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qpieslice_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qscatterseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qsplineseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qstackedbarseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qtcharts-config_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qtchartsexports_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qvalueaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qxylegendmarker_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qxymodelmapper_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/qxyseries_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/scatteranimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/scatterchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/scroller_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/splineanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/splinechartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/stackedbarchartitem_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/valueaxislabel_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/verticalaxis_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xlogydomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xlogypolardomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xyanimation_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xychart_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xydomain_p.h
-/usr/include/QtCharts/6.6.2/QtCharts/private/xypolardomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/abstractbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/abstractchartlayout_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/abstractdomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/areachartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/axisanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/bar_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/baranimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/barchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/boxplotanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/boxplotchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/boxwhiskers_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/boxwhiskersanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/boxwhiskersdata_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/candlestick_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/candlestickanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/candlestickbodywicksanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/candlestickchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/candlestickdata_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/cartesianchartaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/cartesianchartlayout_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartaxiselement_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartbackground_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartbarcategoryaxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartbarcategoryaxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartcategoryaxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartcategoryaxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartcoloraxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartcoloraxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartconfig_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartdataset_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartdatetimeaxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartdatetimeaxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartelement_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/charthelpers_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartlogvalueaxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartlogvalueaxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartpresenter_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/charttheme_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemebluecerulean_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemeblueicy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemebluencs_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemebrownsand_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemedark_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemehighcontrast_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemelight_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthememanager_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemeqt_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartthemesystem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/charttitle_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartvalueaxisx_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/chartvalueaxisy_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/datetimeaxislabel_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/editableaxislabel_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/glwidget_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/glxyseriesdata_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/horizontalaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/horizontalbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/horizontalpercentbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/horizontalstackedbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/legendlayout_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/legendmarkeritem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/legendmoveresizehandler_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/legendscroller_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/linearrowitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/linechartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/logxlogydomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/logxlogypolardomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/logxydomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/logxypolardomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/percentbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/pieanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/piechartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/piesliceanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/pieslicedata_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/piesliceitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartaxisangular_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartaxisradial_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartcategoryaxisangular_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartcategoryaxisradial_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartdatetimeaxisangular_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartdatetimeaxisradial_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartlayout_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartlogvalueaxisangular_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartlogvalueaxisradial_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartvalueaxisangular_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polarchartvalueaxisradial_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/polardomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qabstractaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qabstractbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qabstractseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qarealegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qareaseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qbarcategoryaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qbarlegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qbarmodelmapper_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qbarset_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qboxplotlegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qboxplotmodelmapper_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qboxplotseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qboxset_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcandlesticklegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcandlestickmodelmapper_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcandlestickseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcandlestickset_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcategoryaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qchart_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qchartglobal_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qchartview_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qcoloraxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qdatetimeaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qhorizontalbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qhorizontalpercentbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qhorizontalstackedbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qlegend_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qlegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qlineseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qlogvalueaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qpercentbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qpielegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qpiemodelmapper_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qpieseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qpieslice_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qscatterseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qsplineseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qstackedbarseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qtcharts-config_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qtchartsexports_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qvalueaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qxylegendmarker_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qxymodelmapper_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/qxyseries_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/scatteranimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/scatterchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/scroller_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/splineanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/splinechartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/stackedbarchartitem_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/valueaxislabel_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/verticalaxis_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xlogydomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xlogypolardomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xyanimation_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xychart_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xydomain_p.h
+/usr/include/QtCharts/6.6.3/QtCharts/private/xypolardomain_p.h
 /usr/include/QtCharts/QAbstractAxis
 /usr/include/QtCharts/QAbstractBarSeries
 /usr/include/QtCharts/QAbstractSeries
@@ -415,27 +414,27 @@ popd
 /usr/include/QtCharts/qxylegendmarker.h
 /usr/include/QtCharts/qxymodelmapper.h
 /usr/include/QtCharts/qxyseries.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeabstractrendernode_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeareaseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeaxes_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativebarseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeboxplotseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativecandlestickseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativecategoryaxis_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativechart_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativechartglobal_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativechartnode_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeforeigntypes_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativelineseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativemargins_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativeopenglrendernode_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativepieseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativepolarchart_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativescatterseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativesplineseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativexypoint_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/declarativexyseries_p.h
-/usr/include/QtChartsQml/6.6.2/QtChartsQml/private/qtchartsqmlexports_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeabstractrendernode_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeareaseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeaxes_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativebarseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeboxplotseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativecandlestickseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativecategoryaxis_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativechart_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativechartglobal_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativechartnode_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeforeigntypes_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativelineseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativemargins_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativeopenglrendernode_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativepieseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativepolarchart_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativescatterseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativesplineseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativexypoint_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/declarativexyseries_p.h
+/usr/include/QtChartsQml/6.6.3/QtChartsQml/private/qtchartsqmlexports_p.h
 /usr/include/QtChartsQml/QtChartsQml
 /usr/include/QtChartsQml/QtChartsQmlDepends
 /usr/include/QtChartsQml/QtChartsQmlVersion
@@ -477,13 +476,13 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6Charts.so.6.6.2
-/V3/usr/lib64/libQt6ChartsQml.so.6.6.2
+/V3/usr/lib64/libQt6Charts.so.6.6.3
+/V3/usr/lib64/libQt6ChartsQml.so.6.6.3
 /V3/usr/lib64/qt6/qml/QtCharts/libqtchartsqml2plugin.so
 /usr/lib64/libQt6Charts.so.6
-/usr/lib64/libQt6Charts.so.6.6.2
+/usr/lib64/libQt6Charts.so.6.6.3
 /usr/lib64/libQt6ChartsQml.so.6
-/usr/lib64/libQt6ChartsQml.so.6.6.2
+/usr/lib64/libQt6ChartsQml.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6charts_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6chartsqml_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Charts.json
