@@ -7,7 +7,7 @@
 #
 Name     : qt6charts
 Version  : 6.7.3
-Release  : 19
+Release  : 20
 URL      : https://download.qt.io/official_releases/qt/6.7/6.7.3/submodules/qtcharts-everywhere-src-6.7.3.zip
 Source0  : https://download.qt.io/official_releases/qt/6.7/6.7.3/submodules/qtcharts-everywhere-src-6.7.3.zip
 Summary  : No detailed summary available
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1727806761
+export SOURCE_DATE_EPOCH=1727826936
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -134,7 +134,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1727806761
+export SOURCE_DATE_EPOCH=1727826936
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6charts
 cp %{_builddir}/qtcharts-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6charts/79453f55fa8ee32d7b95581473edcbfd043e088f || :
@@ -420,6 +420,32 @@ popd
 /usr/include/QtCharts/qxylegendmarker.h
 /usr/include/QtCharts/qxymodelmapper.h
 /usr/include/QtCharts/qxyseries.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeabstractrendernode_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeareaseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeaxes_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativebarseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeboxplotseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativecandlestickseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativecategoryaxis_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativechart_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativechartglobal_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativechartnode_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeforeigntypes_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativelineseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativemargins_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativeopenglrendernode_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativepieseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativepolarchart_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativescatterseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativesplineseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativexypoint_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/declarativexyseries_p.h
+/usr/include/QtChartsQml/6.7.3/QtChartsQml/private/qtchartsqmlexports_p.h
+/usr/include/QtChartsQml/QtChartsQml
+/usr/include/QtChartsQml/QtChartsQmlDepends
+/usr/include/QtChartsQml/QtChartsQmlVersion
+/usr/include/QtChartsQml/qtchartsqmlexports.h
+/usr/include/QtChartsQml/qtchartsqmlversion.h
 /usr/lib64/cmake/Qt6BuildInternals/StandaloneTests/QtChartsTestsConfig.cmake
 /usr/lib64/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6Charts/Qt6ChartsConfig.cmake
@@ -429,19 +455,97 @@ popd
 /usr/lib64/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6Charts/Qt6ChartsTargets.cmake
 /usr/lib64/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlConfig.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlConfigVersion.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlDependencies.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets.cmake
+/usr/lib64/cmake/Qt6ChartsQml/Qt6ChartsQmlVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2AdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2ConfigVersion.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2ConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake
 /usr/lib64/libQt6Charts.prl
 /usr/lib64/libQt6Charts.so
+/usr/lib64/libQt6ChartsQml.prl
+/usr/lib64/libQt6ChartsQml.so
 /usr/lib64/pkgconfig/Qt6Charts.pc
+/usr/lib64/pkgconfig/Qt6ChartsQml.pc
 /usr/lib64/qt6/mkspecs/modules/qt_lib_charts.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_charts_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_chartsqml.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_chartsqml_private.pri
 
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/libQt6Charts.so.6.7.3
+/V3/usr/lib64/libQt6ChartsQml.so.6.7.3
+/V3/usr/lib64/qt6/qml/QtCharts/libqtchartsqml2plugin.so
 /usr/lib64/libQt6Charts.so.6
 /usr/lib64/libQt6Charts.so.6.7.3
+/usr/lib64/libQt6ChartsQml.so.6
+/usr/lib64/libQt6ChartsQml.so.6.7.3
 /usr/lib64/qt6/metatypes/qt6charts_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6chartsqml_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Charts.json
+/usr/lib64/qt6/modules/ChartsQml.json
+/usr/lib64/qt6/qml/QtCharts/designer/ChartViewSpecifics.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/AreaSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/BarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/BoxPlotSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/HorizontalBarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/HorizontalPercentBarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/HorizontalStackedBarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/LineSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PercentBarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PieSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PolarAreaSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PolarLineSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PolarScatterSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/PolarSplineSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/ScatterSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/SplineSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/default/StackedBarSeries.qml
+/usr/lib64/qt6/qml/QtCharts/designer/images/areaseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/areaseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/areaseries-polar-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/areaseries-polar-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/barseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/barseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/boxplotseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/boxplotseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalbarseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalbarseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalpercentbarseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalpercentbarseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalstackedbarseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/horizontalstackedbarseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/lineseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/lineseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/lineseries-polar-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/lineseries-polar-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/percentbarseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/percentbarseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/pieseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/pieseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/scatterseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/scatterseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/scatterseries-polar-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/scatterseries-polar-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/splineseries-chart-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/splineseries-chart-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/splineseries-polar-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/splineseries-polar-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/stackedbarseries-icon.png
+/usr/lib64/qt6/qml/QtCharts/designer/images/stackedbarseries-icon16.png
+/usr/lib64/qt6/qml/QtCharts/designer/qtcharts.metainfo
+/usr/lib64/qt6/qml/QtCharts/libqtchartsqml2plugin.so
+/usr/lib64/qt6/qml/QtCharts/plugins.qmltypes
+/usr/lib64/qt6/qml/QtCharts/qmldir
 
 %files license
 %defattr(0644,root,root,0755)
