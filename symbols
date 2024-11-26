@@ -321,6 +321,7 @@ libQt6Charts.so.6:LegendScroller::updateForResizerChange()@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::handleSeriesUpdated()@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::hoverEnterEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::hoverLeaveEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
+libQt6Charts.so.6:LineChartItem::hoverMoveEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::mouseDoubleClickEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::mousePressEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:LineChartItem::mouseReleaseEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
@@ -1347,6 +1348,7 @@ libQt6Charts.so.6:SplineAnimation::~SplineAnimation()@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::handleSeriesUpdated()@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::hoverEnterEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::hoverLeaveEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
+libQt6Charts.so.6:SplineChartItem::hoverMoveEvent(QGraphicsSceneHoverEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::mouseDoubleClickEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::mousePressEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
 libQt6Charts.so.6:SplineChartItem::mouseReleaseEvent(QGraphicsSceneMouseEvent*)@@Qt_6_PRIVATE_API
